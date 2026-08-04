@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swoo Header, Bento Grid & Featured Brands</title>
+    <title>Swoo Tech Mart</title>
     <!-- FontAwesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -1193,6 +1193,334 @@
             width: 90%;
             max-width: 1300px;
         }
+        
+ /* --- DEALS OF THE DAY SECTION --- */
+.deals-main-layout {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 20px;
+    max-width: 1330px;
+    height: auto; /* Removed fixed 300px height so content fits naturally */
+    margin: 30px auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+    align-items: stretch; /* Prevents grid items from forcing stretch matching */
+}
+
+.deals-of-day-section {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.deals-header-bar {
+    background-color: #00ba00;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.deals-title {
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: -0.3px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.deals-content-wrapper {
+    display: grid;
+    grid-template-columns: 1.1fr 1.3fr; /* Restored grid columns for precise width control */
+    gap: 20px;
+    padding: 35px; /* Slightly tightened padding to match original height */
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    align-items: stretch;
+}
+
+.deals-header-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* Left Column: Gallery & Thumbnails */
+.deal-gallery-container {
+    display: flex;
+    flex-direction: row; 
+    gap: 15px;
+    position: relative;
+    align-items: flex-start;
+}
+
+.deal-thumbnails {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.deal-thumb {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    object-fit: cover;
+    padding: 2px;
+    cursor: pointer;
+    background: #fff;
+}
+
+.deal-thumb.active {
+    border-color: #00ba00;
+}
+
+.deal-main-image-wrap {
+    position: relative;
+    width: 100%;
+    height: 440px; /* Reduced height slightly to perfectly match original proportions */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #f3f4f6;
+    border-radius: 12px;
+    padding: 15px;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.deal-main-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.save-badge {
+    position: absolute;
+    top: 15px;
+    left: 85px;
+    background-color: #00ba00;
+    color: #ffffff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.2;
+    z-index: 10;
+}
+
+.save-badge span {
+    display: block;
+    font-size: 9px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/* Right Column: Product Details */
+.deal-product-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.deal-reviews-count {
+    font-size: 12px;
+    color: #6b7280;
+    margin-bottom: 4px;
+}
+
+.deal-product-title {
+    font-size: 18px;
+    font-weight: 800;
+    color: #111827;
+    line-height: 1.4;
+    margin-bottom: 14px;
+}
+
+.deal-pricing-row {
+    display: flex;
+    align-items: baseline;
+    gap: 15px;
+    margin-bottom: 15px;
+    flex-wrap: nowrap;
+}
+
+.deal-current-price {
+    font-size: 24px;
+    font-weight: 800;
+    color: #ff3b30;
+    white-space: nowrap;
+}
+
+.deal-old-price {
+    font-size: 16px;
+    color: #9ca3af;
+    text-decoration: line-through;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.deal-specs-list {
+    list-style: disc;
+    padding-left: 18px;
+    color: #4b5563;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.deal-tags-row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.deal-tag-pill {
+    background-color: #f0fdf4;
+    color: #16a34a;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.deal-tag-pill.gift {
+    background-color: #fff1f2;
+    color: #e11d48;
+    padding: 8px 16px; /* Larger padding to match */
+    font-size: 14px;
+}
+
+/* Countdown Timer Box */
+.deal-countdown-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9fafb;
+    border: 1px solid #f3f4f6;
+    padding: 16px 20px;
+    border-radius: 10px;
+    margin-bottom: 18px;
+    box-sizing: border-box;
+}
+
+.countdown-text {
+    font-size: 12px;
+    font-weight: 700;
+    color: #374151;
+    text-transform: uppercase;
+    line-height: 1.4;
+    max-width: 140px;
+}
+
+.countdown-timers {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.timer-box-item {
+    background-color: #e5e7eb;
+    padding: 10px 12px;
+    border-radius: 8px;
+    text-align: center;
+    min-width: 44px;
+    box-sizing: border-box;
+}
+
+.timer-box-item span {
+    display: inline;
+    font-size: 15px;
+    font-weight: 800;
+    color: #111827;
+    line-height: 1.1;
+}
+
+.timer-box-item small {
+    display: inline;
+    font-size: 15px;
+    color: #6b7280;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-left: 2px;
+}
+
+/* Stock Progress Bar */
+.deal-stock-section {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.stock-bar-bg {
+    background-color: #e5e7eb;
+    height: 7px;
+    border-radius: 4px;
+    width: 100%;
+    margin-bottom: 6px;
+    overflow: hidden;
+}
+
+.stock-bar-fill {
+    background-color: #00b809;
+    height: 100%;
+    width: 65%;
+    border-radius: 2px;
+}
+
+.stock-status-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    font-weight: 600;
+    color: #4b5563;
+}
+
+        /* Right Side Banners Column matching image aspect & spacing */
+        .deals-sidebar-banners {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distributes available height equally among the 3 boxes */
+    height: 100%; /* Matches the height of the left grid column */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+    .sidebar-banner-card {
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #1f2937;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    flex: 1; /* Allows the cards to dynamically grow/shrink to fill the exact height */
+    max-height: none; /* Removes any fixed height restrictions */
+    width: 100%;
+}
+
+.deals-sidebar-banners {
+    gap: 12px; 
+}
+
+        .sidebar-banner-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
 
     </style>
 </head>
@@ -1471,6 +1799,104 @@
             </div>
         </div>
     </div>
+
+    <!-- Main Container layout for Deals + Right Banners Sidebar -->
+<div class="deals-main-layout">
+
+    <!-- Deals of the Day Section Markup -->
+    <div class="deals-of-day-section">
+        <div class="deals-header-bar">
+    <h3 class="deals-title">DEALS OF THE DAY</h3>
+    <a href="#" class="deals-header-link">View All Deals &rarr;</a>
+</div>
+
+        <div class="deals-content-wrapper">
+      <!-- Left: Gallery -->
+<div class="deal-gallery-container">
+    <div class="save-badge">
+        <span>SAVE</span>
+        $199.00
+    </div>
+    <div class="deal-thumbnails">
+        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=120&q=80" alt="Thumb 1" class="deal-thumb active">
+        <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=120&q=80" alt="Thumb 2" class="deal-thumb">
+        <img src="https://images.unsplash.com/photo-1565849904461-04a58ad377e0?auto=format&fit=crop&w=120&q=80" alt="Thumb 3" class="deal-thumb">
+       <img src="https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=120&q=80" alt="Thumb 4" class="deal-thumb">
+    </div>
+    <div class="deal-main-image-wrap">
+        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80" alt="Xioma Redmi Note 11 Pro" class="deal-main-image">
+    </div>
+</div>
+            <!-- Right: Details -->
+            <div class="deal-product-details">
+                <div class="deal-reviews-count">(12)</div>
+                <h2 class="deal-product-title">Xioma Redmi Note 11 Pro 256GB 2023, Black Smartphone</h2>
+                
+                <div class="deal-pricing-row">
+                    <span class="deal-current-price">$569.00</span>
+                    <span class="deal-old-price">$759.00</span>
+                </div>
+
+                <ul class="deal-specs-list">
+                    <li>Intel LGA 1700 Socket: Supports 13th & 12th Gen Intel Core</li>
+                    <li>DDR5 Compatible: 4*SMD DIMMs with XMP 3.0 Memory</li>
+                    <li>Commanding Power Design: Twin 16+1+2 Phases Digital VRM</li>
+                </ul>
+
+                <div class="deal-tags-row">
+                    <span class="deal-tag-pill">FREE SHIPPING</span>
+                    <span class="deal-tag-pill gift">FREE GIFT</span>
+                </div>
+
+                <div class="deal-countdown-box">
+                    <span class="countdown-text">HURRY UP!<br>PROMOTION WILL<br>EXPIRES IN</span>
+                    <div class="countdown-timers">
+                        <div class="timer-box-item">
+                            <span>-162</span>
+                            <small>d</small>
+                        </div>
+                        <div class="timer-box-item">
+                            <span>-9</span>
+                            <small>h</small>
+                        </div>
+                        <div class="timer-box-item">
+                            <span>-3</span>
+                            <small>m</small>
+                        </div>
+                        <div class="timer-box-item">
+                            <span>-34</span>
+                            <small>s</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="deal-stock-section">
+                    <div class="stock-bar-bg">
+                        <div class="stock-bar-fill"></div>
+                    </div>
+                    <div class="stock-status-row">
+                        <span>Sold: <strong>26/75</strong></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Right Side Promo Cards Column -->
+<div class="deals-sidebar-banners">
+  <!-- Banner 1: Gaming Controllers / Accessories -->
+    <div class="sidebar-banner-card">
+        <img src="images/Game Controller.png" alt="Gaming Controllers Sale">
+    </div>
+    
+    <!-- Banner 2: Tablet & Stylus Workspace -->
+    <div class="sidebar-banner-card">
+        <img src="images/Tablet.png" alt="Tablet and Stylus">
+    </div>
+    <div class="sidebar-banner-card">
+        <img src="images/Phone.png" alt="Smartphone Perspective Mockup">
+    </div>
+</div>
 
 </body>
 </html>
