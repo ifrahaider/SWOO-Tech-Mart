@@ -13,10 +13,114 @@
         /* Snyk exact font match */
         @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&display=swap');
 
+        /* --- RESPONSIVE MOBILE VIEW --- */
+@media screen and (max-width: 992px) {
+    .deals-main-layout {
+        grid-template-columns: 1fr; /* Stacks left box and right sidebar vertically */
+        height: auto;
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .deals-sidebar-banners {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        height: auto;
+        width: 100%;
+    }
+
+    .sidebar-banner-card {
+        height: 180px; /* Gives each right banner a clear visible height on mobile */
+        width: 100%;
+    }
+}
+
+/* --- RESPONSIVE MOBILE VIEW --- */
+        @media screen and (max-width: 992px) {
+            .deals-main-layout {
+                grid-template-columns: 1fr;
+                height: auto;
+                width: 100%;
+                padding: 0 10px;
+            }
+
+            .deals-sidebar-banners {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                height: auto;
+                width: 100%;
+            }
+
+            .sidebar-banner-card {
+                height: 180px;
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .deals-sidebar-banners {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar-banner-card {
+                height: 200px;
+            }
+
+            .deals-content-wrapper {
+                flex-direction: column;
+                padding: 15px;
+            }
+
+            /* --- NEW: Top Bar Mobile Responsiveness --- */
+            .swoo-top-bar {
+                flex-direction: column;
+                gap: 12px;
+                padding: 12px 15px;
+                text-align: center;
+            }
+
+            .top-bar-left, 
+            .top-bar-right {
+                flex-direction: column;
+                gap: 8px;
+                width: 100%;
+                justify-content: center;
+            }
+
+            .top-bar-right {
+                gap: 12px;
+                border-top: 1px solid #f0f0f0;
+                padding-top: 10px;
+            }
+
+            .header-container {
+                max-width: 100%;
+                border-radius: 0;
+                box-shadow: none;
+            }
+        }
+
+@media screen and (max-width: 768px) {
+    .deals-sidebar-banners {
+        grid-template-columns: 1fr; /* Stacks the 3 right banners fully on mobile screens */
+    }
+
+    .sidebar-banner-card {
+        height: 200px;
+    }
+
+    .deals-content-wrapper {
+        flex-direction: column; /* Stacks the image gallery and product details if needed */
+        padding: 15px;
+    }
+}
+
         body {
             margin: 0;
             font-family: 'Inter', sans-serif;
-            background-color: #f4f5f7;
+            background-color: #e3e6ec;
             display: flex;
             flex-direction: column;
             align-items: center;
