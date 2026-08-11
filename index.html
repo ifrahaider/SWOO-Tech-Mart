@@ -13,114 +13,10 @@
         /* Snyk exact font match */
         @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&display=swap');
 
-        /* --- RESPONSIVE MOBILE VIEW --- */
-@media screen and (max-width: 992px) {
-    .deals-main-layout {
-        grid-template-columns: 1fr; /* Stacks left box and right sidebar vertically */
-        height: auto;
-        width: 100%;
-        padding: 0 10px;
-    }
-
-    .deals-sidebar-banners {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        height: auto;
-        width: 100%;
-    }
-
-    .sidebar-banner-card {
-        height: 180px; /* Gives each right banner a clear visible height on mobile */
-        width: 100%;
-    }
-}
-
-/* --- RESPONSIVE MOBILE VIEW --- */
-        @media screen and (max-width: 992px) {
-            .deals-main-layout {
-                grid-template-columns: 1fr;
-                height: auto;
-                width: 100%;
-                padding: 0 10px;
-            }
-
-            .deals-sidebar-banners {
-                display: flex;
-                flex-direction: column;
-                gap: 15px;
-                height: auto;
-                width: 100%;
-            }
-
-            .sidebar-banner-card {
-                height: 180px;
-                width: 100%;
-            }
-        }
-
-        @media screen and (max-width: 768px) {
-            .deals-sidebar-banners {
-                grid-template-columns: 1fr;
-            }
-
-            .sidebar-banner-card {
-                height: 200px;
-            }
-
-            .deals-content-wrapper {
-                flex-direction: column;
-                padding: 15px;
-            }
-
-            /* --- NEW: Top Bar Mobile Responsiveness --- */
-            .swoo-top-bar {
-                flex-direction: column;
-                gap: 12px;
-                padding: 12px 15px;
-                text-align: center;
-            }
-
-            .top-bar-left, 
-            .top-bar-right {
-                flex-direction: column;
-                gap: 8px;
-                width: 100%;
-                justify-content: center;
-            }
-
-            .top-bar-right {
-                gap: 12px;
-                border-top: 1px solid #f0f0f0;
-                padding-top: 10px;
-            }
-
-            .header-container {
-                max-width: 100%;
-                border-radius: 0;
-                box-shadow: none;
-            }
-        }
-
-@media screen and (max-width: 768px) {
-    .deals-sidebar-banners {
-        grid-template-columns: 1fr; /* Stacks the 3 right banners fully on mobile screens */
-    }
-
-    .sidebar-banner-card {
-        height: 200px;
-    }
-
-    .deals-content-wrapper {
-        flex-direction: column; /* Stacks the image gallery and product details if needed */
-        padding: 15px;
-    }
-}
-
         body {
             margin: 0;
             font-family: 'Inter', sans-serif;
-            background-color: #e3e6ec;
+            background-color: #f4f5f7;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -1626,6 +1522,50 @@
             display: block;
         }
 
+.swoo-independent-shipping-banner {
+    grid-column: 1 / -1;
+    width: 100%;
+    margin: 0 0 10px 0;
+    background-color: #00ca00;
+    box-sizing: border-box;
+    padding: 0 38px;
+    height: 70px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shipping-banner-content {
+    display: contents;
+}
+
+.shipping-member-text {
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    line-height: 70px;
+    height: 100%;
+}
+
+.shipping-member-text i {
+    margin-right: 8px;
+    color: #ffff00;
+}
+
+.shipping-trial-link {
+    color: #ffffff;
+    text-decoration: underline;
+    white-space: nowrap;
+    margin-left: auto;
+    margin: 0;
+    padding: 0;
+    line-height: 70px;
+    height: 100%;
+}
+
     </style>
 </head>
 <body>
@@ -1999,6 +1939,14 @@
     </div>
     <div class="sidebar-banner-card">
         <img src="images/Phone.png" alt="Smartphone Perspective Mockup">
+    </div>
+</div>
+
+<div class="swoo-independent-shipping-banner">
+    <div class="shipping-member-text">
+        <i class="fa-solid fa-star" style="color: #ffff00;"></i>
+        Member get <span style="color: #ffff00;">FREE SHIPPING*</span> with no order minimum!. *Restriction apply 
+        <a href="#" class="shipping-trial-link" style="color: #ffffff; margin-left: 15px; text-decoration: underline;">Try free 30-days trial!</a>
     </div>
 </div>
 
