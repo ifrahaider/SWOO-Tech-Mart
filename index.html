@@ -555,61 +555,34 @@
             display: block;
         }
 
-  /* Middle Right Camera Card */
+        /* Middle Right Camera Card */
         .bento-camera-card {
-            grid-column: 2 / 3;
-            grid-row: 2 / 3;
-            background-color: #18181b;
-            color: #ffffff;
-            border-radius: 16px;
-            padding: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
-            position: relative;
-            overflow: hidden;
-            height: 155px;
-            box-sizing: border-box;
-        }
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    background-color: #18181b;
+    border-radius: 16px;
+    padding: 0; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    position: relative;
+    overflow: hidden;
+    height: 155px;
+    box-sizing: border-box;
+}
 
-        .camera-info {
-            z-index: 2;
-        }
-
-        .camera-title {
-            font-size: 13px;
-            font-weight: 800;
-            margin: 0;
-            line-height: 1.1;
-        }
-
-        .camera-subtitle {
-            font-size: 13px;
-            font-weight: 800;
-            margin: 0 0 8px 0;
-        }
-
-        .camera-from {
-            font-size: 8px;
-            color: #a1a1aa;
-            font-weight: 700;
-            margin-bottom: 2px;
-        }
-
-        .camera-price {
-            font-size: 16px;
-            font-weight: 800;
-            color: #00ca00;
-        }
+.camera-info {
+    display: none; 
+}
 
 .camera-img {
-            width: 95px;
-            height: 95px;
-            object-fit: cover;
-            border-radius: 8px;
-            z-index: 2;
-        }
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+             
 
         /* Bottom Row Cards Container */
         .bento-bottom-row {
@@ -678,7 +651,7 @@
             display: inline;
         }
 
-.card-link-sm {
+        .card-link-sm {
             font-size: 10px;
             font-weight: 800;
             color: #111827;
@@ -1684,14 +1657,7 @@ color: #4b5563;
 
             <!-- Middle Right Camera Card -->
             <div class="bento-camera-card">
-                <div class="camera-info">
-                    <div class="camera-from">OKODO</div>
-                    <h3 class="camera-title">HERO 11+</h3>
-                    <div class="camera-subtitle">BLACK</div>
-                    <div class="camera-from">from</div>
-                    <div class="camera-price">$169</div>
-                </div>
-                <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=400&auto=format&fit=crop" alt="Camera" class="camera-img">
+                <img src="images/OKODOl.png" alt="Camera" class="camera-img">
             </div>
 
             <!-- Bottom Row Cards Container -->
