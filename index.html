@@ -20,7 +20,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 20px 0;
+            padding: 20px 0 0 0 !important;
         }
 
         /* Outer container to hold header sections with rounded corners and shadow */
@@ -2754,6 +2754,8 @@ color: #4b5563;
     border-bottom: 1px solid #d1d5db;
     padding-bottom: 8px;
     position: relative;
+    width: 100%; /* Ensures the container spans the full grid width all the way to the red line */
+    box-sizing: border-box;
 }
 
 .input-group input {
@@ -2801,6 +2803,78 @@ color: #4b5563;
     align-items: center;
 }
 
+.footer-copyright-bar {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 40px 20px 25px 20px;
+    box-sizing: border-box;
+    margin-top: 45px;
+    margin-bottom: 0 !important;
+}
+
+.footer-copyright-container {
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-top: 45px;
+    border-top: 1px solid #dee2e7;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.copyright-text {
+    grid-column: 1;
+    text-align: left;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.copyright-brand {
+    font-weight: 700;
+    color: #111827;
+}
+
+.footer-payment-icons {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers the icons absolutely in the middle space */
+    gap: 16px;
+    margin-left: 135px;
+}
+
+.footer-payment-icons img {
+    height: 36px; /* Controls the height of your image icons so they align nicely */
+    width: auto;
+    object-fit: contain;
+}
+
+.footer-mobile-link {
+    flex: 1;
+    text-align: right;
+}
+
+.footer-mobile-link a {
+    font-size: 14px;
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer-mobile-link a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
 
        </style>
     </head>
@@ -3902,6 +3976,32 @@ color: #4b5563;
             </p>
         </div>
     </div>
+            
+          <div class="footer-copyright-bar">
+        <div class="footer-copyright-container">
+            <!-- Left: Copyright Text -->
+         <div class="copyright-text">
+         &copy; 2024 <span class="copyright-brand">Shawonetc3</span> . All Rights Reserved
+        </div>
+            
+     
+            <!-- Center: Payment Icons -->
+            <div class="footer-payment-icons">
+            <img src="images/Paypal.png" alt="PayPal" class="payment-logo">
+            <img src="images/Mastercard.png" alt="Mastercard" class="payment-logo">
+            <img src="images/Visa.png" alt="Visa" class="payment-logo">
+            <img src="images/Stripe.png" alt="Stripe" class="payment-logo">
+            <img src="images/klarna.png" alt="Klarna" class="payment-logo">
+            </div> 
+
+            <!-- Right: Mobile Site Link -->
+            <div class="footer-mobile-link">
+                <a href="#">Mobile Site</a>
+            </div>
+        </div>
+    </div>
+
+
 </footer>
   
    
