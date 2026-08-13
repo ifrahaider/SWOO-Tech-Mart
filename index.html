@@ -2374,6 +2374,161 @@ color: #4b5563;
     display: block;
 }
 
+/* --- CSS for "Your Recently Viewed" Section --- */
+.recently-viewed-section {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 24px;
+    width: 100%;
+    max-width: 1300px;
+    margin: 20px auto;
+    box-sizing: border-box;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.recently-viewed-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.view-all-link {
+    font-size: 13px;
+    color: #6b7280;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.view-all-link:hover {
+    color: #111827;
+}
+
+.recently-viewed-grid {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 8px;
+}
+
+.product-card {
+    position: relative;
+    background-color: #ffffff;
+    border: 1px solid #f3f4f6;
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    min-width: 220px; /* Ensures cards maintain a consistent compact width */
+    flex: 0 0 calc(25% - 15px);
+}
+
+.badge {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    font-size: 5px;
+    font-weight: 400;
+    padding: 2px 6px;
+    border-radius: 4px;
+    z-index: 2;
+}
+
+.new-badge {
+    background-color: #1f2937;
+    color: #ffffff;
+}
+
+.save-badge {
+    background-color: #10b981;
+    color: #ffffff;
+}
+
+.wishlist-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 24px;
+    height: 24px;
+    background-color: #f3f4f6;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.product-img-wrap {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.product-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.product-rating {
+    font-size: 11px;
+    color: #9ca3af;
+    margin-bottom: 4px;
+}
+
+.product-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0 0 10px 0;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.product-price {
+    font-size: 12px;
+    font-weight: 600;
+    color: #111827;
+    margin-top: auto;
+}
+
+.product-price-wrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: auto;
+}
+
+.current-price {
+    color: #ef4444;
+}
+
+.product-old-price {
+    font-size: 12px;
+    color: #9ca3af;
+    text-decoration: line-through;
+    font-weight: 500;
+}
+
        </style>
     </head>
 <body>
@@ -3284,6 +3439,71 @@ color: #4b5563;
     <!-- Right Banner -->
     <div class="promo-banner right-banner">
         <img src="images/right banner.png" alt="Download App Banner" class="promo-banner-img">
+    </div>
+</div>
+
+<div class="recently-viewed-section">
+    <div class="recently-viewed-header">
+        <h2 class="section-title">YOUR RECENTLY VIEWED</h2>
+        <a href="#" class="view-all-link">View All</a>
+    </div>
+
+    <div class="recently-viewed-grid">
+        <!-- Product 1 -->
+        <div class="product-card">
+            <span class="badge new-badge">NEW</span>
+            <span class="wishlist-btn"></span>
+            <div class="product-img-wrap">
+                <img src="images/watch.png" alt="Xomie Remid 8 Sport" class="product-img">
+            </div>
+            <div class="product-info">
+                <div class="product-rating">(152)</div>
+                <h3 class="product-name">Xomie Remid 8 Sport Water Resitance Watch</h3>
+                <div class="product-price">$579.00</div>
+            </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+            <span class="badge new-badge">NEW</span>
+            <span class="wishlist-btn"></span>
+            <div class="product-img-wrap">
+                <img src="images/laptop.png" alt="Microte Surface 2.0 Laptop" class="product-img">
+            </div>
+            <div class="product-info">
+                <h3 class="product-name">Microte Surface 2.0 Laptop</h3>
+                <div class="product-price">$979.00</div>
+            </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+            <span class="wishlist-btn"></span>
+            <div class="product-img-wrap">
+                <img src="images/aPad tablet.png" alt="aPod Pro Tablet 2023" class="product-img">
+            </div>
+            <div class="product-info">
+                <h3 class="product-name">aPod Pro Tablet 2023 LTE + Wifi, GPS Cellular 12.9 Inch, 512GB</h3>
+                <div class="product-price">$979.00 - $1,259.00</div>
+            </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card">
+            <span class="badge save-badge">SAVE $192.00</span>
+            <span class="wishlist-btn"></span>
+            <div class="product-img-wrap">
+                <img src="images/Smart Phone.png" alt="SROK Smart Phone" class="product-img">
+            </div>
+            <div class="product-info">
+                <div class="product-rating">(152)</div>
+                <h3 class="product-name">SROK Smart Phone 128GB, Oled Retina</h3>
+                <div class="product-price-wrap">
+                    <span class="product-price current-price">$579.00</span>
+                    <span class="product-old-price">$779.00</span>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
