@@ -248,7 +248,7 @@
             padding-left: 16px;
             margin-left: 4px;
         }
-    
+
        .cart-icon-circle {
             position: relative;
             width: 42px;
@@ -582,7 +582,6 @@
     object-fit: cover; 
     display: block;
 }
-             
 
         /* Bottom Row Cards Container */
         .bento-bottom-row {
@@ -683,6 +682,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 20px;
+            box-sizing: border-box;
         }
 
         .featured-box-single {
@@ -694,6 +694,7 @@
             display: flex;
             flex-direction: column;
             box-sizing: border-box;
+            justify-content: space-between;
             gap: 28px;
         }
 
@@ -998,7 +999,7 @@
             position: absolute;
             top: 0;
             left: 3.5px;
-            width: 18px;
+                        width: 18px;
             height: 25px;
             border-top: 3.5px solid #00ca00;
             border-right: 3.5px solid #00ca00;
@@ -1139,7 +1140,7 @@
 
         /* Responsive wrapper sizing */
         body > div {
-            width: 90%;
+            width: 100%;
             max-width: 1300px;
         }
 
@@ -1515,299 +1516,599 @@ color: #4b5563;
     line-height: 70px;
     height: 100%;
 }
+
+/* --- BEST SELLER SECTION STYLES --- */
+.best-seller-section-wrapper {
+    width: 100%;
+    max-width: 1300px;
+    margin: 20px auto;
+    padding: 30px 30px  45px 30px;
+    box-sizing: border-box;
+    font-family: inherit;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.best-seller-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 45px;
+    border-bottom: 1px solid #f3f4f6;
+    padding-bottom: 15px;
+}
+
+.best-seller-tabs {
+    display: flex;
+    gap: 30px;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: 800;
+    color: #9ca3af;
+    cursor: pointer;
+    padding: 0;
+    letter-spacing: -0.3px;
+    transition: color 0.2s;
+}
+
+.tab-btn.active,
+.tab-btn:hover {
+    color: #111827;
+}
+
+.view-all-link {
+    font-size: 14px;
+    font-weight: 600;
+    color: #9ca3af;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.view-all-link:hover {
+    color: #111827;
+}
+
+/* Carousel Layout */
+.products-carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.products-grid-5 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Product Card Base */
+.product-card {
+    background-color: #ffffff;
+    border: 1px solid #f3f4f6;
+    border-radius: 14px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-sizing: border-box;
+    transition: box-shadow 0.2s;
+}
+
+.product-card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.product-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 36px;
+    margin-bottom: 10px;
+}
+
+.save-badge-pill {
+    background-color: #00ba00;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 6px 10px;
+    border-radius: 8px;
+    text-align: center;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.wishlist-btn {
+    background: #f3f4f6;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #6b7280;
+    margin-left: auto;
+    transition: background 0.2s, color 0.2s;
+}
+
+.wishlist-btn:hover {
+    background: #fee2e2;
+    color: #ef4444;
+}
+
+/* Image Container */
+.product-img-wrap {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.product-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Product Info */
+.product-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.product-reviews {
+    font-size: 11px;
+    color: #9ca3af;
+    margin-bottom: 6px;
+}
+
+.product-title {
+    font-size: 13px;
+    font-weight: 800;
+    color: #111827;
+    line-height: 1.5;
+    margin: 0 0 22px 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 36px;
+}
+
+.product-price-row {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.current-price {
+    font-size: 16px;
+    font-weight: 800;
+    color: #111827;
+}
+
+.current-price.red {
+    color: #ff3b30;
+}
+
+.old-price {
+    font-size: 13px;
+    color: #9ca3af;
+    text-decoration: line-through;
+    font-weight: 600;
+}
+
+.product-tags {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+}
+
+.tag-pill {
+    font-size: 10px;
+    font-weight: 800;
+    padding: 3px 6px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+}
+
+.tag-pill.shipping {
+    background-color: #f0fdf4;
+    color: #16a34a;
+}
+
+.tag-pill.gift {
+    background-color: #fff1f2;
+    color: #e11d48;
+}
+
+.tag-pill.subtle {
+    background-color: #f3f4f6;
+    color: #4b5563;
+}
+
+.stock-status {
+    font-size: 11px;
+    font-weight: 600;
+    color: #16a34a;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 13px;
+}
+
+.stock-status.out {
+    color: #ef4444;
+}
+
+.stock-status.order-status,
+.stock-status.contact-status {
+    color: #4b5563;
+    font-weight: 700;
+}
+
+/* Variants Row */
+.product-variants {
+    display: flex;
+    gap: 6px;
+    margin-top: auto;
+}
+
+.variant-thumb {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    border: 1px solid #e5e7eb;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.variant-thumb.active {
+    border-color: #00ba00;
+}
+
+/* Carousel Arrows */
+.carousel-arrow-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #374151;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    z-index: 10;
+    transition: background 0.2s, color 0.2s;
+}
+
+.carousel-arrow-btn:hover {
+    background: #111827;
+    color: #ffffff;
+    border-color: #111827;
+}
+
+.prev-btn {
+    left: -20px;
+}
+
+.next-btn {
+    right: -20px;
+}
        </style>
     </head>
 <body>
 
- <!-- Main Header Container -->
-    <div class="header-container">
-        <div class="header-wrapper">
-            <!-- Top Utility Bar -->
-            <div class="swoo-top-bar">
-                <div class="top-bar-left">
-                    <span class="hotline-tag">Hotline 24/7</span>
-                    <span class="hotline-number">(025) 3886 25 16</span>
-                </div>
-                <div class="top-bar-right">
-                    <a href="#" class="top-link">Sell on Swoo</a>
-                    <a href="#" class="top-link">Order Tracking</a>
-                    <div class="top-dropdown">
-                        <span>USD</span>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </div>
-                    <div class="vertical-divider"></div>
-                    <div class="top-dropdown">
-                        <img src="https://flagcdn.com/w20/us.png" alt="US flag" class="flag-img">
-                        <span>Eng</span>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </div>
-                </div>
+<!-- Main Header Container -->
+<div class="header-container">
+    <div class="header-wrapper">
+        <!-- Top Utility Bar -->
+        <div class="swoo-top-bar">
+            <div class="top-bar-left">
+                <span class="hotline-tag">Hotline 24/7</span>
+                <span class="hotline-number">(025) 3886 25 16</span>
             </div>
-
-            <!-- Main Navigation Bar -->
-            <div class="swoo-main-nav">
-                <div class="swoo-logo-wrap">
-                    <div class="logo-icon-box">
-                        <svg width="22" height="18" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M2 5H22L20 17H4L2 5Z" stroke="white" stroke-width="2.5" stroke-linejoin="round"/>
-                            <path d="M8 8V6C8 4.34315 9.34315 3 11 3H13C14.6569 3 16 4.34315 16 6V8" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
-                        </svg>
-                    </div>
-                    <div class="logo-text-box">
-                        <span class="brand-title">SWOO</span>
-                        <span class="brand-subtitle">TECH MART</span>
-                    </div>
-                </div>
-
-                <ul class="swoo-nav-links">
-                    <li><a href="#">HOMES <i class="fa-solid fa-chevron-down"></i></a></li>
-                    <li><a href="#">PAGES <i class="fa-solid fa-chevron-down"></i></a></li>
-                    <li><a href="#">PRODUCTS <i class="fa-solid fa-chevron-down"></i></a></li>
-                    <li><a href="#">CONTACT</a></li>
-                </ul>
-
-                <div class="swoo-actions">
-                    <button class="action-circle-btn"><i class="fa-regular fa-heart"></i></button>
-                    <button class="action-circle-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-
-                    <div class="swoo-user-box">
-                        <div class="user-avatar-circle"><i class="fa-regular fa-user"></i></div>
-                        <div class="user-text-content">
-                            <span class="welcome-label">WELCOME</span>
-                            <a href="#" class="auth-text">LOG IN / REGISTER</a>
-                        </div>
-                    </div>
-
-                       <div class="swoo-cart-box">
-                        <div class="cart-icon-circle">
-                            <i class="fa-solid fa-bag-shopping"></i>
-                            <span class="cart-count-badge">5</span>
-                        </div>
-                        <div class="cart-text-content">
-                            <span class="cart-label">CART</span>
-                            <span class="cart-amount">$1,689.00</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Green Search & Perks Bar -->
-        <div class="swoo-search-perks-bar">
-            <div class="search-pill-container">
-                <div class="search-category-dropdown">
-                    <span>All Categories</span>
+            <div class="top-bar-right">
+                <a href="#" class="top-link">Sell on Swoo</a>
+                <a href="#" class="top-link">Order Tracking</a>
+                <div class="top-dropdown">
+                    <span>USD</span>
                     <i class="fa-solid fa-chevron-down"></i>
                 </div>
-                <input type="text" class="search-input-field" placeholder="Search anything...">
-                <button class="search-submit-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </div>
-
-            <div class="perks-right-group">
-                <span class="perk-item">Free Shipping Over $199</span>
-                <span class="perk-item">30 Days Money Back</span>
-                <span class="perk-item">100% Secure Payment</span>
+                <div class="vertical-divider"></div>
+                <div class="top-dropdown">
+                    <img src="https://flagcdn.com/w20/us.png" alt="US flag" class="flag-img">
+                    <span>Eng</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- HERO SECTION CONTAINER -->
-    <div class="hero-section-wrapper">
-        <!-- Left Categories Sidebar -->
-        <div class="hero-sidebar">
-            <span class="category-sale-title">SALE 40% OFF</span>
-            <ul class="category-list">
-                <li><a href="#">Laptops</a></li>
-                <li><a href="#">PC & Computers</a></li>
-                <li><a href="#">Cell Phones</a></li>
-                <li><a href="#">Tablets</a></li>
-                <li><a href="#">Gaming & VR</a></li>
-                <li><a href="#">Networking</a></li>
-                   <li><a href="#">Cameras</a></li>
-                <li><a href="#">Sounds</a></li>
-                <li><a href="#">Office</a></li>
-                <li><a href="#">Storage, USB</a></li>
-                <li><a href="#">Accessories</a></li>
-                <li><a href="#">Clearance</a></li>
+        <!-- Main Navigation Bar -->
+        <div class="swoo-main-nav">
+            <div class="swoo-logo-wrap">
+                <div class="logo-icon-box">
+                    <svg width="22" height="18" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 5H22L20 17H4L2 5Z" stroke="white" stroke-width="2.5" stroke-linejoin="round"/>
+                        <path d="M8 8V6C8 4.34315 9.34315 3 11 3H13C14.6569 3 16 4.34315 16 6V8" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div class="logo-text-box">
+                    <span class="brand-title">SWOO</span>
+                    <span class="brand-subtitle">TECH MART</span>
+                </div>
+            </div>
+
+            <ul class="swoo-nav-links">
+                <li><a href="#">HOMES <i class="fa-solid fa-chevron-down"></i></a></li>
+                <li><a href="#">PAGES <i class="fa-solid fa-chevron-down"></i></a></li>
+                <li><a href="#">PRODUCTS <i class="fa-solid fa-chevron-down"></i></a></li>
+                <li><a href="#">CONTACT</a></li>
             </ul>
+
+            <div class="swoo-actions">
+                <button class="action-circle-btn"><i class="fa-regular fa-heart"></i></button>
+                <button class="action-circle-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+
+                <div class="swoo-user-box">
+                    <div class="user-avatar-circle"><i class="fa-regular fa-user"></i></div>
+                    <div class="user-text-content">
+                        <span class="welcome-label">WELCOME</span>
+                        <a href="#" class="auth-text">LOG IN / REGISTER</a>
+                    </div>
+                </div>
+
+                <div class="swoo-cart-box">
+                    <div class="cart-icon-circle">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span class="cart-count-badge">5</span>
+                    </div>
+                    <div class="cart-text-content">
+                        <span class="cart-label">CART</span>
+                        <span class="cart-amount">$1,689.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <!-- Green Search & Perks Bar -->
+    <div class="swoo-search-perks-bar">
+        <div class="search-pill-container">
+            <div class="search-category-dropdown">
+                <span>All Categories</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <input type="text" class="search-input-field" placeholder="Search anything...">
+            <button class="search-submit-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
 
-        <!-- Right Bento Grid -->
-        <div class="hero-bento-grid">
-            <!-- Main Big Headphone Banner -->
-            <div class="bento-main-banner">
-                <div class="headphone-content">
-                    <h1>Noise Cancelling</h1>
-                    <div class="subtitle-line">Headphone</div>
-                    <div class="headphone-features">
-                        Boso Over-Ear Headphone<br>
-                        Wifi, Voice Assistant,<br>
-                        Low Latency Game Mode
-                    </div>
-                      <button class="buy-now-btn">BUY NOW</button>
+        <div class="perks-right-group">
+            <span class="perk-item">Free Shipping Over $199</span>
+            <span class="perk-item">30 Days Money Back</span>
+            <span class="perk-item">100% Secure Payment</span>
+        </div>
+    </div>
+</div> 
+
+
+<!-- HERO SECTION CONTAINER -->
+<div class="hero-section-wrapper">
+    <!-- Left Categories Sidebar -->
+    <div class="hero-sidebar">
+        <span class="category-sale-title">SALE 40% OFF</span>
+        <ul class="category-list">
+            <li><a href="#">Laptops</a></li>
+            <li><a href="#">PC & Computers</a></li>
+            <li><a href="#">Cell Phones</a></li>
+            <li><a href="#">Tablets</a></li>
+            <li><a href="#">Gaming & VR</a></li>
+            <li><a href="#">Networking</a></li>
+            <li><a href="#">Cameras</a></li>
+            <li><a href="#">Sounds</a></li>
+            <li><a href="#">Office</a></li>
+            <li><a href="#">Storage, USB</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Clearance</a></li>
+        </ul>
+    </div>
+
+    <!-- Right Bento Grid -->
+    <div class="hero-bento-grid">
+        <!-- Main Big Headphone Banner -->
+        <div class="bento-main-banner">
+            <div class="headphone-content">
+                <h1>Noise Cancelling</h1>
+                <div class="subtitle-line">Headphone</div>
+                <div class="headphone-features">
+                    Boso Over-Ear Headphone<br>
+                    Wifi, Voice Assistant,<br>
+                    Low Latency Game Mode
                 </div>
-                <img src="images/Headphone1.png" alt="Noise Cancelling Headphone" class="headphone-img-bg">
-                <div class="slider-indicator">3 / 3</div>
+                <button class="buy-now-btn">BUY NOW</button>
+            </div>
+            <img src="images/Headphone1.png" alt="Noise Cancelling Headphone" class="headphone-img-bg">
+            <div class="slider-indicator">3 / 3</div>
+        </div>
+
+        <!-- Top Right Watch Card -->
+        <div class="bento-watch-card">
+            <img src="images/Smart Watch.png" alt="Watch" class="watch-img">
+        </div>
+
+        <!-- Middle Right Camera Card -->
+        <div class="bento-camera-card">
+            <img src="images/OKODOl.png" alt="Camera" class="camera-img">
+        </div>
+
+        <!-- Bottom Row Cards Container -->
+        <div class="bento-bottom-row">
+            <!-- Bottom Left Card: Sono Playgo 5 -->
+            <div class="small-bento-card">
+                <div class="card-text-col">
+                    <div class="card-title-sm">Sono Playgo 5</div>
+                    <p class="card-subtitle-sm">from <span class="card-price-green">$569</span></p>
+                    <a href="#" class="card-link-sm">DISCOVER NOW</a>
+                </div>
+                <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?q=80&w=400&auto=format&fit=crop" alt="Console" class="card-img-sm">
             </div>
 
-            <!-- Top Right Watch Card -->
-            <div class="bento-watch-card">
-                <img src="images/Smart Watch.png" alt="Watch" class="watch-img">
-            </div>
-
-            <!-- Middle Right Camera Card -->
-            <div class="bento-camera-card">
-                <img src="images/OKODOl.png" alt="Camera" class="camera-img">
-            </div>
-
-            <!-- Bottom Row Cards Container -->
-            <div class="bento-bottom-row">
-                <!-- Bottom Left Card: Sono Playgo 5 -->
-                <div class="small-bento-card">
-                    <div class="card-text-col">
-                        <div class="card-title-sm">Sono Playgo 5</div>
-                        <p class="card-subtitle-sm">from <span class="card-price-green">$569</span></p>
-                        <a href="#" class="card-link-sm">DISCOVER NOW</a>
-                    </div>
-                    <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?q=80&w=400&auto=format&fit=crop" alt="Console" class="card-img-sm">
+            <!-- Bottom Right Card: Logitek Bluetooth Keyboard -->
+            <div class="small-bento-card dark-card">
+                <div class="card-text-col">
+                    <div class="card-title-sm">Logitek Bluetooth</div>
+                    <div class="card-subtitle-sm">Keyboard</div>
+                    <a href="#" class="card-link-sm">Best for all device</a>
                 </div>
-
-                <!-- Bottom Right Card: Logitek Bluetooth Keyboard -->
-                  <div class="small-bento-card dark-card">
-                    <div class="card-text-col">
-                        <div class="card-title-sm">Logitek Bluetooth</div>
-                        <div class="card-subtitle-sm">Keyboard</div>
-                        <a href="#" class="card-link-sm">Best for all device</a>
-                    </div>
-                    <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?q=80&w=400&auto=format&fit=crop" alt="Keyboard" class="card-img-sm">
-                </div>
+                <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?q=80&w=400&auto=format&fit=crop" alt="Keyboard" class="card-img-sm">
             </div>
         </div>
     </div>
+</div> 
 
-    <!-- DUAL SECTION WRAPPER (Featured Brands & Top Categories Box) -->
-    <div class="dual-section-wrapper">
-        <!-- Featured Brands Box -->
-        <div class="featured-box-single">
-            <div class="featured-header-row">
-                <h2 class="featured-title">FEATURED BRANDS</h2>
+<!-- DUAL SECTION WRAPPER (Featured Brands & Top Categories Box) -->
+<div class="dual-section-wrapper">
+    <!-- Featured Brands Box -->
+    <div class="featured-box-single">
+        <div class="featured-header-row">
+            <h2 class="featured-title">FEATURED BRANDS</h2>
+            <a href="#" class="view-all-link">View All</a>
+        </div>
+        <div class="brands-grid-wide">
+            <!-- Row 1 -->
+            <div class="brand-logo-item jamx-brand">
+                <div class="jamx-icon"></div>
+                <span class="jamx-text">JAMX</span>
+            </div>
+            <div class="brand-logo-item">
+                <div class="digitek-logo">Digitek</div>
+            </div>
+            <div class="brand-logo-item tek-react">
+                <div class="tek-react-icon">
+                    <div class="tek-react-inner-sq1"></div>
+                    <div class="tek-react-inner-sq2"></div>
+                    <div class="tek-react-center-dot"></div>
+                </div>
+                <div class="tek-react-text">tek<br>react<br>js</div>
+            </div>
+            <div class="brand-logo-item grafbase-brand">
+                <div class="grafbase-icon-wrap">
+                    <div class="grafbase-inner-drop"></div>
+                </div>
+                <div class="grafbase-text-box">
+                    <span class="grafbase-title">Grafbase</span>
+                    <span class="grafbase-subtitle">TECH & DATA</span>
+                </div>
+            </div>
+            <div class="brand-logo-item msi-brand">msi</div>
+
+            <!-- Row 2 -->
+            <div class="brand-logo-item ohbear-brand">
+                <div class="ohbear-icon-box"><i class="fa-solid fa-paw"></i></div>
+                <span class="ohbear-text">ohbear</span>
+            </div>
+            <div class="brand-logo-item oak-brand">
+                <div class="oak-shape oak-circle"></div>
+                <div class="oak-shape oak-triangle"></div>
+                <div class="oak-shape oak-k-symbol"></div>
+            </div>
+            <div class="brand-logo-item snyk-badge">snyk</div>
+            <div class="brand-logo-item sonex-brand-wrap">
+                <span class="sonex-text-main">sonex</span>
+                <div class="sonex-underline-box">
+                    <div class="sonex-red-stroke"></div>
+                    <div class="sonex-cyan-stroke"></div>
+                </div>
+            </div>
+            <div class="brand-logo-item stropi-brand">stropi</div>
+        </div>
+    </div> 
+
+    <!-- Top Categories Box with Navigation Controls and Icons -->
+    <div class="featured-box-single">
+        <div class="featured-header-row">
+            <h2 class="featured-title">TOP CATEGORIES</h2>
+            <div style="display: flex; align-items: center; gap: 15px;">
                 <a href="#" class="view-all-link">View All</a>
-            </div>
-            <div class="brands-grid-wide">
-                <!-- Row 1 -->
-                <div class="brand-logo-item jamx-brand">
-                    <div class="jamx-icon"></div>
-                    <span class="jamx-text">JAMX</span>
-                </div>
-                <div class="brand-logo-item">
-                    <div class="digitek-logo">Digitek</div>
-                </div>
-                <div class="brand-logo-item tek-react">
-                    <div class="tek-react-icon">
-                        <div class="tek-react-inner-sq1"></div>
-                        <div class="tek-react-inner-sq2"></div>
-                        <div class="tek-react-center-dot"></div>
-                    </div>
-                    <div class="tek-react-text">tek<br>react<br>js</div>
-                     </div>
-                <div class="brand-logo-item grafbase-brand">
-                    <div class="grafbase-icon-wrap">
-                        <div class="grafbase-inner-drop"></div>
-                    </div>
-                    <div class="grafbase-text-box">
-                        <span class="grafbase-title">Grafbase</span>
-                        <span class="grafbase-subtitle">TECH & DATA</span>
-                    </div>
-                </div>
-                <div class="brand-logo-item msi-brand">msi</div>
-
-                <!-- Row 2 -->
-                <div class="brand-logo-item ohbear-brand">
-                    <div class="ohbear-icon-box"><i class="fa-solid fa-paw"></i></div>
-                    <span class="ohbear-text">ohbear</span>
-                </div>
-                <div class="brand-logo-item oak-brand">
-                    <div class="oak-shape oak-circle"></div>
-                    <div class="oak-shape oak-triangle"></div>
-                    <div class="oak-shape oak-k-symbol"></div>
-                </div>
-                <div class="brand-logo-item snyk-badge">snyk</div>
-                <div class="brand-logo-item sonex-brand-wrap">
-                    <span class="sonex-text-main">sonex</span>
-                    <div class="sonex-underline-box">
-                        <div class="sonex-red-stroke"></div>
-                        <div class="sonex-cyan-stroke"></div>
-                          </div>
-                </div>
-                <div class="brand-logo-item stropi-brand">stropi</div>
-            </div>
-        </div>
-
-        <!-- Top Categories Box with Navigation Controls and Icons -->
-        <div class="featured-box-single">
-            <div class="featured-header-row">
-                <h2 class="featured-title">TOP CATEGORIES</h2>
-                <div style="display: flex; align-items: center; gap: 15px;">
-                    <a href="#" class="view-all-link">View All</a>
-                    <div class="top-categories-controls">
-                        <button class="slider-arrow-btn"><i class="fa-solid fa-chevron-left"></i></button>
-                        <button class="slider-arrow-btn"><i class="fa-solid fa-chevron-right"></i></button>
-                    </div>
-                </div>
-            </div>
-             <div class="top-categories-grid">
-                <!-- Laptops -->
-                <div class="top-category-item">
-                    <img src="images/laptop.png" alt="Laptops" class="top-category-img">
-                    <span class="top-category-label">Laptops</span>
-                </div>
-                <!-- PC Gaming -->
-                <div class="top-category-item">
-                    <img src="images/speaker.png" alt="PC Gaming" class="top-category-img">
-                    <span class="top-category-label">PC Gaming</span>
-                </div>
-                <!-- Headphones -->
-                <div class="top-category-item">
-                    <img src="images/black headphone.png" alt="Headphones" class="top-category-img">
-                    <span class="top-category-label">Headphones</span>
-                </div>
-                <!-- Monitors -->
-                <div class="top-category-item">
-                    <img src="images/Monitor.png" alt="Monitors" class="top-category-img">
-                    <span class="top-category-label">Monitors</span>
+                <div class="top-categories-controls">
+                    <button class="slider-arrow-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="slider-arrow-btn"><i class="fa-solid fa-chevron-right"></i></button>
                 </div>
             </div>
         </div>
-    </div>
+        <div class="top-categories-grid">
+            <!-- Laptops -->
+            <div class="top-category-item">
+                <img src="images/laptop.png" alt="Laptops" class="top-category-img">
+                <span class="top-category-label">Laptops</span>
+            </div>
+            <!-- PC Gaming -->
+            <div class="top-category-item">
+                <img src="images/speaker.png" alt="PC Gaming" class="top-category-img">
+                <span class="top-category-label">PC Gaming</span>
+            </div>
+            <!-- Headphones -->
+            <div class="top-category-item">
+                <img src="images/black headphone.png" alt="Headphones" class="top-category-img">
+                <span class="top-category-label">Headphones</span>
+            </div>
+            <!-- Monitors -->
+            <div class="top-category-item">
+                <img src="images/Monitor.png" alt="Monitors" class="top-category-img">
+                <span class="top-category-label">Monitors</span>
+            </div>
+        </div>
+    </div> 
+</div>
+   
+<!-- Main Container layout for Deals + Right Banners Sidebar -->
+<div class="deals-main-layout">
 
-        <!-- Main Container layout for Deals + Right Banners Sidebar -->
-     <div class="deals-main-layout">
-
-      <!-- Deals of the Day Section Markup -->
-       <div class="deals-of-day-section">
+    <!-- Deals of the Day Section Markup -->
+    <div class="deals-of-day-section">
         <div class="deals-header-bar">
-        <h3 class="deals-title">DEALS OF THE DAY</h3>
-       <a href="#" class="deals-header-link">View All Deals &rarr;</a>
-    </div>
+            <h3 class="deals-title">DEALS OF THE DAY</h3>
+            <a href="#" class="deals-header-link">View All Deals &rarr;</a>
+        </div>
 
         <div class="deals-content-wrapper">
-         <!-- Left: Gallery -->
-        <div class="deal-gallery-container">
-        <div class="save-badge">
-          <span>SAVE</span>
-          $199.00
-    </div>
+            <!-- Left: Gallery -->
+            <div class="deal-gallery-container">
+                <div class="save-badge">
+                    <span>SAVE</span>
+                    $199.00
+                </div>
 
-     <div class="deal-thumbnails">
-        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=120&q=80" alt="Thumb 1" class="deal-thumb active">
-        <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=120&q=80" alt="Thumb 2" class="deal-thumb">
-        <img src="https://images.unsplash.com/photo-1565849904461-04a58ad377e0?auto=format&fit=crop&w=120&q=80" alt="Thumb 3" class="deal-thumb">
-       <img src="https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=120&q=80" alt="Thumb 4" class="deal-thumb">
-    </div>
-    <div class="deal-main-image-wrap">
-        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80" alt="Xioma Redmi Note 11 Pro" class="deal-main-image">
-    </div>
-</div>
+                <div class="deal-thumbnails">
+                    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=120&q=80" alt="Thumb 1" class="deal-thumb active">
+                    <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=120&q=80" alt="Thumb 2" class="deal-thumb">
+                    <img src="https://images.unsplash.com/photo-1565849904461-04a58ad377e0?auto=format&fit=crop&w=120&q=80" alt="Thumb 3" class="deal-thumb">
+                    <img src="https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=120&q=80" alt="Thumb 4" class="deal-thumb">
+                </div>
+                <div class="deal-main-image-wrap">
+                    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80" alt="Xioma Redmi Note 11 Pro" class="deal-main-image">
+                </div>
+            </div>
+
             <!-- Right: Details -->
             <div class="deal-product-details">
                 <div class="deal-reviews-count">(12)</div>
@@ -1820,7 +2121,7 @@ color: #4b5563;
 
                 <ul class="deal-specs-list">
                     <li>Intel LGA 1700 Socket: Supports 13th & 12th Gen Intel Core</li>
-                     <li>DDR5 Compatible: 4*SMD DIMMs with XMP 3.0 Memory</li>
+                    <li>DDR5 Compatible: 4*SMD DIMMs with XMP 3.0 Memory</li>
                     <li>Commanding Power Design: Twin 16+1+2 Phases Digital VRM</li>
                 </ul>
 
@@ -1828,24 +2129,24 @@ color: #4b5563;
                     <span class="deal-tag-pill">FREE SHIPPING</span>
                     <span class="deal-tag-pill gift">FREE GIFT</span>
                 </div>
-      
-                  <div class="deal-countdown-box">
+
+                <div class="deal-countdown-box">
                     <span class="countdown-text">HURRY UP!<br>PROMOTION WILL<br>EXPIRES IN</span>
                     <div class="countdown-timers">
                         <div class="timer-box-item">
-                            <span>-162</span>
+                            <span>06</span>
                             <small>d</small>
                         </div>
                         <div class="timer-box-item">
-                            <span>-9</span>
+                            <span>12</span>
                             <small>h</small>
                         </div>
                         <div class="timer-box-item">
-                            <span>-3</span>
+                            <span>45</span>
                             <small>m</small>
                         </div>
                         <div class="timer-box-item">
-                            <span>-34</span>
+                            <span>30</span>
                             <small>s</small>
                         </div>
                     </div>
@@ -1861,21 +2162,24 @@ color: #4b5563;
                 </div>
             </div>
         </div>
-    </div>
+    </div> 
 
-                    <!-- Right Side Promo Cards Column -->
-     <div class="deals-sidebar-banners">
-     <!-- Banner 1: Gaming Controllers / Accessories -->
-    <div class="sidebar-banner-card">
-        <img src="images/Game Controller.png" alt="Gaming Controllers Sale">
-     </div>
+    <!-- Right Side Promo Cards Column  -->
+    <div class="deals-sidebar-banners">
+        <!-- Banner 1: Gaming Controllers / Accessories -->
+        <div class="sidebar-banner-card">
+            <img src="images/Game Controller.png" alt="Gaming Controllers Sale">
+        </div>
 
-    <!-- Banner 2: Tablet & Stylus Workspace -->
-    <div class="sidebar-banner-card">
-        <img src="images/Tablet.png" alt="Tablet and Stylus">
-    </div>
-    <div class="sidebar-banner-card">
-        <img src="images/Phone.png" alt="Smartphone Perspective Mockup">
+        <!-- Banner 2: Tablet & Stylus Workspace -->
+        <div class="sidebar-banner-card">
+            <img src="images/Tablet.png" alt="Tablet and Stylus">
+        </div>
+        
+        <!-- Banner 3: Smartphone Perspective -->
+        <div class="sidebar-banner-card">
+            <img src="images/Phone.png" alt="Smartphone Perspective Mockup">
+        </div>
     </div>
 </div>
 
@@ -1887,70 +2191,153 @@ color: #4b5563;
     </div>
 </div>
 
+<!-- BEST SELLER SECTION WRAPPER -->
+<div class="best-seller-section-wrapper">
+    <!-- Header Navigation Bar -->
+    <div class="best-seller-header">
+        <div class="best-seller-tabs">
+            <button class="tab-btn active">BEST SELLER</button>
+            <button class="tab-btn">NEW IN</button>
+            <button class="tab-btn">POPULAR</button>
+        </div>
+        <a href="#" class="view-all-link">View All</a>
+    </div>
+
+    <!-- Products Carousel Container with Navigation Arrows -->
+    <div class="products-carousel-container">
+        <button class="carousel-arrow-btn prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
+        
+        <div class="products-grid-5">
+            <!-- Product 1: BOSO 2 Wireless Headphones -->
+            <div class="product-card">
+                <div class="product-top-row">
+                    <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                </div>
+                <div class="product-img-wrap">
+                    <img src="images/Headphone.png" alt="BOSO 2 Wireless On Ear Headphone" class="product-img">
+                </div>
+                <div class="product-info">
+                    <div class="product-reviews">(152)</div>
+                    <h3 class="product-title">BOSO 2 Wireless On Ear Headphone</h3>
+                    <div class="product-price-row">
+                        <span class="current-price">$359.00</span>
+                    </div>
+                    <div class="product-tags">
+                        <span class="tag-pill shipping">FREE SHIPPING</span>
+                        <span class="tag-pill gift">FREE GIFT</span>
+                    </div>
+                    <div class="stock-status">
+                        <i class="fa-solid fa-circle-check"></i> In stock
+                    </div>
+                    <div class="product-variants">
+                        <img src="images/Headphone.png" alt="White Variant" class="variant-thumb active">
+                        <img src="images/black headphone.png" alt="Black Variant" class="variant-thumb">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2: OPod Pro 12.9 Inch -->
+            <div class="product-card">
+                <div class="product-top-row">
+                    <span class="save-badge-pill">SAVE<br>$199.00</span>
+                    <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                </div>
+                <div class="product-img-wrap">
+                    <img src="images/tablets.png" alt="OPod Pro 12.9 Inch" class="product-img">
+                </div>
+                <div class="product-info">
+                    <div class="product-reviews">(152)</div>
+                    <h3 class="product-title">OPod Pro 12.9 Inch M1 2023, 64GB + Wifi, GPS</h3>
+                    <div class="product-price-row">
+                        <span class="current-price red">$569.00</span>
+                        <span class="old-price">$759.00</span>
+                    </div>
+                    <div class="product-tags">
+                        <span class="tag-pill shipping">FREE SHIPPING</span>
+                    </div>
+                    <div class="stock-status">
+                        <i class="fa-solid fa-circle-check"></i> In stock
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3: uLosk Mini case 2.0 -->
+            <div class="product-card">
+                <div class="product-top-row">
+                    <span class="save-badge-pill">SAVE<br>$59.00</span>
+                    <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                </div>
+                <div class="product-img-wrap">
+                    <img src="images/xenon.jpg" alt="uLosk Mini case 2.0" class="product-img">
+                </div>
+                <div class="product-info">
+                    <div class="product-reviews">(8)</div>
+                    <h3 class="product-title">uLosk Mini case 2.0, Xenon i10 / 32GB / SSD 512GB / VGA 8GB</h3>
+                    <div class="product-price-row">
+                        <span class="current-price red">$1,729.00</span>
+                        <span class="old-price">$2,119.00</span>
+                    </div>
+                    <div class="product-tags">
+                        <span class="tag-pill shipping">FREE SHIPPING</span>
+                    </div>
+                    <div class="stock-status out">
+                        <i class="fa-solid fa-circle-xmark"></i> Out of stock
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 4: Opplo Watch Series 8 -->
+            <div class="product-card">
+                <div class="product-top-row">
+                    <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                </div>
+                <div class="product-img-wrap">
+                    <img src="images/watch.png" alt="Opplo Watch Series 8" class="product-img">
+                </div>
+                <div class="product-info">
+                    <div class="product-reviews">&nbsp;</div>
+                    <h3 class="product-title">Opplo Watch Series 8 GPS + Cellular Stainless Steel Case with Milanese Loop</h3>
+                    <div class="product-price-row">
+                        <span class="current-price">$979.00 - $1,259.00</span>
+                    </div>
+                    <div class="product-tags">
+                        <span class="tag-pill subtle">$2.98 SHIPPING</span>
+                    </div>
+                    <div class="stock-status order-status">
+                        PRE - ORDER
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 5: iSmart 24V Charger -->
+            <div class="product-card">
+                <div class="product-top-row">
+                    <span class="save-badge-pill">SAVE<br>$3.00</span>
+                    <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                </div>
+                <div class="product-img-wrap">
+                    <img src="images/Charger.png" alt="iSmart 24V Charger" class="product-img">
+                </div>
+                <div class="product-info">
+                    <div class="product-reviews">(9)</div>
+                    <h3 class="product-title">iSmart 24V Charger</h3>
+                    <div class="product-price-row">
+                        <span class="current-price red">$9.00</span>
+                        <span class="old-price">$12.00</span>
+                    </div>
+                    <div class="product-tags">
+                        <span class="tag-pill subtle">$3.98 SHIPPING</span>
+                    </div>
+                    <div class="stock-status contact-status">
+                        Contact
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-arrow-btn next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+</div>
+
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
