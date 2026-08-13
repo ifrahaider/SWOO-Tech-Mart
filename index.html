@@ -1814,6 +1814,136 @@ color: #4b5563;
 .next-btn {
     right: -20px;
 }
+
+/* --- BRAND NEW FOR YOU SECTION STYLES --- */
+.brand-new-section-wrapper {
+    width: 100%;
+    max-width: 1300px;
+    margin: 5px auto;
+    padding: 30px;
+    box-sizing: border-box;
+    font-family: inherit;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.brand-new-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.brand-new-title {
+    font-size: 17px;
+    font-weight: 750;
+    color: #111827;
+    letter-spacing: -0.3px;
+    margin: 0;
+}
+
+.brand-new-controls {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #f3f4f6;
+    padding: 4px 8px;
+    border-radius: 50px;
+}
+
+.brand-new-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.brand-new-card {
+    background-color: #ffffff;
+    border: 1px solid #f3f4f6;
+    border-radius: 14px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    transition: box-shadow 0.2s;
+}
+
+.brand-new-card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.brand-new-img-wrap {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    background-color: #f9fafb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-new-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.brand-new-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.brand-new-product-title {
+    font-size: 15.5px;
+    font-weight: 750;
+    color: #111827;
+    line-height: 1.5;
+    margin: 0 0 8px 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.brand-new-desc {
+    font-size: 12px;
+    color: #6b7280;
+    line-height: 1.5;
+    margin: 0 0 16px 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    flex-grow: 1;
+}
+
+.brand-new-btn {
+    display: inline-block;
+    background-color: transparent;
+    color: #00ba00;
+    border: 1px solid #00ba00;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+    align-self: flex-start;
+}
+
+.brand-new-btn:hover {
+    background-color: #00ba00;
+    color: #ffffff;
+}
+
        </style>
     </head>
 <body>
@@ -2336,6 +2466,69 @@ color: #4b5563;
         </div>
 
         <button class="carousel-arrow-btn next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+</div>
+
+<!-- BRAND NEW FOR YOU SECTION -->
+<div class="brand-new-section-wrapper">
+    <!-- Header Bar -->
+    <div class="brand-new-header">
+        <h2 class="brand-new-title">BRAND NEW FOR YOU</h2>
+        <div class="brand-new-controls">
+            <button class="slider-arrow-btn"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="slider-arrow-btn"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+    <!-- 4-Column Banner Grid -->
+    <div class="brand-new-grid">
+        <!-- Card 1 -->
+        <div class="brand-new-card">
+            <div class="brand-new-img-wrap">
+                <img src="images/Computer Case.png" alt="Zumac Steel Computer Case" class="brand-new-img">
+            </div>
+            <div class="brand-new-info">
+                <h3 class="brand-new-product-title">Zumac Steel Computer Case</h3>
+                <p class="brand-new-desc">And an option to upgrade every three years</p>
+                <a href="#" class="brand-new-btn">SHOP NOW</a>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="brand-new-card">
+            <div class="brand-new-img-wrap">
+                <img src="images/Gaming Monitor.png" alt="Summer Sale Monitor" class="brand-new-img">
+            </div>
+            <div class="brand-new-info">
+                <h3 class="brand-new-product-title">Summer Sale with Sale up to 50% OFF for Foam Gaming Chair.</h3>
+                <p class="brand-new-desc">Limited time offer. Hurry up</p>
+                <a href="#" class="brand-new-btn">SHOP NOW</a>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="brand-new-card">
+            <div class="brand-new-img-wrap">
+                <img src="images/Gaming Chair.png" alt="Gaming Chair" class="brand-new-img">
+            </div>
+            <div class="brand-new-info">
+                <h3 class="brand-new-product-title">Summer Sale with Sale up to 50% OFF for Foam Gaming Chair.</h3>
+                <p class="brand-new-desc">Limited time offer. Hurry up</p>
+                <a href="#" class="brand-new-btn">SHOP NOW</a>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="brand-new-card">
+            <div class="brand-new-img-wrap">
+                <img src="images/IPad Mini.png" alt="iPad Pro Mini 6" class="brand-new-img">
+            </div>
+            <div class="brand-new-info">
+                <h3 class="brand-new-product-title">iPad Pro Mini 6 - Powerful I in hand</h3>
+                <p class="brand-new-desc">From $19.99/month for 36 months. $280.35 final payment due in month 37</p>
+                <a href="#" class="brand-new-btn">SHOP NOW</a>
+            </div>
+        </div>
     </div>
 </div>
 
