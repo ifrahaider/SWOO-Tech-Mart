@@ -2572,6 +2572,236 @@ color: #4b5563;
     text-decoration: underline;
 }
 
+/* --- CSS for Main Footer Section --- */
+.main-footer {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 60px 20px;
+    box-sizing: border-box;
+    border-top: 1px solid #f3f4f6;
+}
+
+.footer-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.9fr repeat(4, 1fr);
+    gap: 40px;
+    box-sizing: border-box;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-heading {
+    font-size: 16px;
+    font-weight: 800;
+    color: #111827;
+    margin: 0 0 32px 0;
+    letter-spacing: 0.3px;
+}
+
+.footer-hotline-label {
+    font-size: 12px;
+    color: #6b7280;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.footer-phone {
+    font-size: 26px;
+    font-weight: 700;
+    color: #02b653;
+    margin-bottom: 24px;
+}
+
+.footer-address {
+    font-size: 13px;
+    line-height: 1.8;
+    color: #4b5563;
+    margin: 0 0 30px 0;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon {
+    width: 32px;
+    height: 32px;
+    background-color: #f3f4f6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1f2937;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.social-icon:hover {
+    background-color: #e5e7eb;
+}
+
+.footer-col-title {
+    font-size: 15px;
+    font-weight: 750;
+    color: #111827;
+    margin: 0 0 26px 0;
+    letter-spacing: 0.3px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-links li a {
+    font-size: 14px;
+    color: #4b5563;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-links li a:hover {
+    color: #111827;
+}
+
+/* --- CSS for Footer Bottom Bar --- */
+.footer-bottom-bar {
+    background-color: #ffffff;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    border-top: 1px solid #f3f4f6;
+}
+
+.footer-bottom-container {
+    max-width: 1300px;
+    width: 100%;
+    margin: 55px auto 0 auto;
+    display: grid;
+    grid-template-columns: 1.9fr repeat(4, 1fr);
+    justify-content: space-between;
+    align-items: start;
+    gap: 40px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
+/* Selectors Style */
+.footer-selectors {
+    grid-column: 1 / 2;
+    display: flex;
+    gap: 12px;
+}
+
+.custom-select-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 18px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #111827;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+.custom-select-box i {
+    font-size: 11px;
+    color: #4b5563;
+    margin-left: 4px;
+}
+
+/* Subscription Section Style */
+.footer-subscribe-section {
+    grid-column: 2 / span 4;
+    width: 100%;
+    flex: 1;
+    max-width: 700px;
+}
+
+.subscribe-title {
+    font-size: 18px;
+    font-weight: 750;
+    color: #111827;
+    margin: 0 0 32px 0;
+    letter-spacing: 0.3px;
+}
+
+.highlight-red {
+    color: #ff3b30;
+}
+
+.subscribe-form {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #d1d5db;
+    padding-bottom: 8px;
+    position: relative;
+}
+
+.input-group input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: #111827;
+    background: transparent;
+    padding: 4px 0;
+}
+
+.input-group input::placeholder {
+    color: #9ca3af;
+}
+
+.subscribe-btn {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    font-weight: 750;
+    color: #00b853;
+    cursor: pointer;
+    padding: 0 4px;
+    letter-spacing: 0.5px;
+}
+
+.subscribe-policy {
+    font-size: 13px;
+    color: #6b7280;
+    margin: 0;
+}
+
+.subscribe-policy a {
+    color: #111827;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.flag-icon {
+    font-size: 16px; /* Increased from 1px so the emoji flag renders at a proper, visible size */
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+}
+
+
        </style>
     </head>
 <body>
@@ -3565,6 +3795,116 @@ color: #4b5563;
         <a href="#" class="footer-seo-view-all">View All</a>
     </div>
 </div>
+
+<!-- Combined Single Footer Section Structure -->
+<footer class="main-footer">
+    <div class="footer-container">
+        <!-- Column 1: Brand / Contact info -->
+        <div class="footer-col footer-brand-col">
+            <h3 class="footer-heading">SWOO - 1ST NYC TECH ONLINE MARKET</h3>
+            <div class="footer-hotline-label">HOTLINE 24/7</div>
+            <div class="footer-phone">(025) 3686 25 16</div>
+            <p class="footer-address">
+                257 Thatcher Road St, Brooklyn, Manhattan,<br>
+                NY 10092<br>
+                contact@Swootechmart.com
+            </p>
+            <div class="footer-socials">
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-pinterest-p"></i></a>
+            </div>
+        </div>
+
+        <!-- Column 2: Top Categories -->
+        <div class="footer-col">
+            <h4 class="footer-col-title">TOP CATEGORIES</h4>
+            <ul class="footer-links">
+                <li><a href="#">Laptops</a></li>
+                <li><a href="#">PC & Computers</a></li>
+                <li><a href="#">Cell Phones</a></li>
+                <li><a href="#">Tablets</a></li>
+                <li><a href="#">Gaming & VR</a></li>
+                <li><a href="#">Networks</a></li>
+                <li><a href="#">Cameras</a></li>
+                <li><a href="#">Sounds</a></li>
+                <li><a href="#">Office</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 3: Company -->
+        <div class="footer-col">
+            <h4 class="footer-col-title">COMPANY</h4>
+            <ul class="footer-links">
+                <li><a href="#">About Swoo</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Career</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Sitemap</a></li>
+                <li><a href="#">Store Locations</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 4: Help Center -->
+        <div class="footer-col">
+            <h4 class="footer-col-title">HELP CENTER</h4>
+            <ul class="footer-links">
+                <li><a href="#">Customer Service</a></li>
+                <li><a href="#">Policy</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Trach Order</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">My Account</a></li>
+                <li><a href="#">Product Support</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 5: Partner -->
+        <div class="footer-col">
+            <h4 class="footer-col-title">PARTNER</h4>
+            <ul class="footer-links">
+                <li><a href="#">Become Seller</a></li>
+                <li><a href="#">Affiliate</a></li>
+                <li><a href="#">Advertise</a></li>
+                <li><a href="#">Partnership</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Bottom Bar Integrated Inside Footer -->
+    <div class="footer-bottom-container">
+        <!-- Left: Currency and Language Selectors -->
+        <div class="footer-selectors">
+            <div class="custom-select-box">
+                <span>USD</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="custom-select-box">
+            <img src="https://flagcdn.com/w20/us.png" alt="US Flag" class="flag-img">
+            <span>Eng</span>
+            <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+
+        <!-- Right: Subscription Form -->
+        <div class="footer-subscribe-section">
+            <h4 class="subscribe-title">SUBSCRIBE & GET <span class="highlight-red">10% OFF</span> FOR YOUR FIRST ORDER</h4>
+            <form class="subscribe-form">
+                <div class="input-group">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="subscribe-btn">SUBSCRIBE</button>
+                </div>
+            </form>
+            <p class="subscribe-policy">
+                By subscribing, you're accepted the our <a href="#">Policy</a>
+            </p>
+        </div>
+    </div>
+</footer>
+  
+   
 
 </body>
 </html>
