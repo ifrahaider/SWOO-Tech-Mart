@@ -1962,13 +1962,13 @@ color: #4b5563;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 25px;
-    border-bottom: 1px solid #f3f4f6;
-    padding-bottom: 18px;
+    border-bottom: none;
+    padding-bottom: 0;
 }
 
 .top-phones-title {
     font-size: 17px;
-    font-weight: 850;
+    font-weight: 800;
     color: #111827;
     letter-spacing: -0.3px;
     margin: 0;
@@ -1990,8 +1990,10 @@ color: #4b5563;
 .top-phones-banner-layout {
     display: grid;
     grid-template-columns: 1.0fr 1fr;
-    gap: 20px;
+    gap: 20px  15px;
     margin-bottom: 30px;
+    border-bottom: 1.2px solid #f3f4f6;
+    padding-bottom: 30px;
 }
 
 .hero-promo-card {
@@ -2025,23 +2027,24 @@ color: #4b5563;
 /* Right Categories 6-item Grid */
 .hero-categories-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px  30px;
+    padding-left: 20px;
 }
 
 .hero-cat-item {
-    background-color: #f9fafb;
-    border: 1px solid #f3f4f6;
-    border-radius: 10px;
-    padding: 12px 16px;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 8px  12px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: border-color 0.2s;
+    transition: none;
 }
 
 .hero-cat-item:hover {
-    border-color: #d1d5db;
+    border-color: transparent;
 }
 
 .cat-text-info {
@@ -2062,8 +2065,8 @@ color: #4b5563;
 }
 
 .cat-thumb {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     object-fit: contain;
 }
 
@@ -2072,19 +2075,134 @@ color: #4b5563;
     position: relative;
     display: flex;
     align-items: center;
-    padding: 0 24px;
+    padding: 0 50px; /* Space on sides for floating prev/next navigation buttons */
+}
+
+.product-card {
+    background-color: transparent; 
+    border: none;                     
+    border-radius: 0;
+    padding: 12px 10px;            
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-shadow: none; 
+    align-items: stretch;      
+    text-align: left;           
+}
+
+.product-card .rating-count {
+    align-self: center;
+    text-align: center ;
+    display: block ;
+    margin: 4px auto ; 
+}
+
+.product-card .product-title,
+.product-card h3,
+.product-card h4 {
+    font-size: 14px;       
+    font-weight: 750;     
+    line-height: 1.4;     
+    margin-top: 7px;       
+    margin-bottom: 20px; 
+}
+
+.product-card .product-price,
+.product-card .price {
+    font-size: 20px;       
+    font-weight: 700;
+    margin-top: 4px;       
+    margin-bottom: 6px;    
+}
+
+.product-card .badge, 
+.product-card .shipping-badge,
+.product-card .free-shipping {
+    font-size: 18px;       
+}
+
+.product-card .stock-status,
+.product-card .in-stock,
+.product-card .contact-status {
+    font-size: 12px; 
+    font-weight: 400;     
+    color: #111827;       
+}
+
+.product-card .stock-status svg,
+.product-card .in-stock svg,
+.product-card .stock-status i,
+.product-card .in-stock i {
+    color: #10b981;       
+    fill: #10b981;
+}
+
+.product-image-wrap {
+    width: 100%;
+    height: 190px;
+    background-color: transparent;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    position: relative;
+}
+
+.product-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;            /* Ensures items fit inside cleanly without clipping */
 }
 
 .new-badge-pill {
     background-color: #111827;
     color: #ffffff;
     font-size: 10px;
-    font-weight: 800;
-    padding: 4px 10px;
-    border-radius: 6px;
+    font-weight: 700;
+    padding: 8px 16px;
+    border-radius: 8px;
     text-align: center;
     text-transform: uppercase;
+    text-align: left;
 }
+
+/* Styling for Previous and Next buttons */
+.carousel-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 40px;
+    height: 60px;
+    background-color: #f3f4f6; /* Light button background */
+    color: #111827;
+    border: none;
+    border-radius: 6%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.carousel-nav-btn:hover {
+    background-color: #111827;
+    color: #ffffff;
+}
+
+/* Specific positioning for left (prev) and right (next) buttons */
+.carousel-prev-btn {
+    left: -10px;
+}
+
+.carousel-next-btn {
+    right: -10px;
+}
+
        </style>
     </head>
 <body>
@@ -2755,7 +2873,7 @@ color: #4b5563;
                     <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
                 </div>
                 <div class="product-img-wrap">
-                    <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=400&q=80" alt="SROK Smart Phone" class="product-img">
+                    <img src="images/Smart Phone.png" alt="SROK Smart Phone" class="product-img">
                 </div>
                 <div class="product-info">
                     <div class="product-reviews">(152)</div>
@@ -2780,7 +2898,7 @@ color: #4b5563;
                     <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
                 </div>
                 <div class="product-img-wrap">
-                    <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=400&q=80" alt="aPod Pro Tablet" class="product-img">
+                    <img src="images/aPad tablet.png" alt="aPod Pro Tablet" class="product-img">
                 </div>
                 <div class="product-info">
                     <div class="product-reviews">&nbsp;</div>
@@ -2803,7 +2921,7 @@ color: #4b5563;
                     <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
                 </div>
                 <div class="product-img-wrap">
-                    <img src="https://images.unsplash.com/photo-1565849904461-04a58ad377e0?auto=format&fit=crop&w=400&q=80" alt="OPod Pro 12.9" class="product-img">
+                    <img src="images/OPod Pro 12.9.png" alt="OPod Pro 12.9" class="product-img">
                 </div>
                 <div class="product-info">
                     <div class="product-reviews">(5)</div>
@@ -2819,9 +2937,9 @@ color: #4b5563;
                         <i class="fa-solid fa-circle-check"></i> In stock
                     </div>
                     <div class="product-variants">
-                        <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=80&q=80" alt="Variant" class="variant-thumb">
-                        <img src="https://images.unsplash.com/photo-1565849904461-04a58ad377e0?auto=format&fit=crop&w=80&q=80" alt="Variant" class="variant-thumb active">
-                        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=80&q=80" alt="Variant" class="variant-thumb">
+                        <img src="images/OPod Pro 12.9.png" alt="Variant" class="variant-thumb">
+                        <img src="images/Smart Phone.png" alt="Variant" class="variant-thumb active">
+                        <img src="images/Xiamoi Redmi Note.png" alt="Variant" class="variant-thumb">
                     </div>
                 </div>
             </div>
@@ -2833,7 +2951,7 @@ color: #4b5563;
                     <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
                 </div>
                 <div class="product-img-wrap">
-                    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=400&q=80" alt="Xiamoi Redmi Note 5" class="product-img">
+                    <img src="images/Xiamoi Redmi Note.png" alt="Xiamoi Redmi Note 5" class="product-img">
                 </div>
                 <div class="product-info">
                     <div class="product-reviews">(9)</div>
@@ -2857,7 +2975,7 @@ color: #4b5563;
                     <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
                 </div>
                 <div class="product-img-wrap">
-                    <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=400&q=80" alt="Microsute Alpha Ultra S5" class="product-img">
+                    <img src="images/Microsute Alpha Ultra.png" alt="Microsute Alpha Ultra S5" class="product-img">
                 </div>
                 <div class="product-info">
                     <div class="product-reviews">(8)</div>
@@ -2872,8 +2990,8 @@ color: #4b5563;
                         Contact
                     </div>
                     <div class="product-variants">
-                        <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=80&q=80" alt="Variant" class="variant-thumb">
-                        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=80&q=80" alt="Variant" class="variant-thumb">
+                        <img src="images/Microsute Alpha Ultra.png" alt="Variant" class="variant-thumb">
+                        <img src="images/tablets.png" alt="Variant" class="variant-thumb">
                     </div>
                 </div>
             </div>
