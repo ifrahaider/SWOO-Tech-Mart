@@ -2203,6 +2203,148 @@ color: #4b5563;
     right: -10px;
 }
 
+/* --- CSS Styles for 3 Column Category Section --- */
+.triple-category-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 1300px;
+    margin: 10px auto 20px auto;
+    box-sizing: border-box;
+}
+
+.category-column {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 35px 20px 45px 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.category-col-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.category-col-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #111827;
+    letter-spacing: -0.2px;
+    margin: 0;
+}
+
+.category-col-view-all {
+    font-size: 13px;
+    font-weight: 600;
+    color: #9ca3af;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.category-col-view-all:hover {
+    color: #111827;
+}
+
+.category-banner {
+  background: #1e1e1e !important;
+    color: #ffffff;
+    border-radius: 12px;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow: visible;
+    min-height: 140px;
+    box-sizing: border-box;
+    margin-bottom: 60px;
+    border-bottom: none !important;
+}
+
+.category-banner-img {
+  width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    left: auto !important;
+    object-fit: cover !important; /* Fits the whole image without zooming/cropping */
+    object-position: right center !important;
+    z-index: 1;
+    border-radius: 12px; /* Keeps image corners nicely rounded inside the banner */
+    overflow: hidden;
+}
+
+/* Ensure text stays visible on top of the background image */
+.category-banner-content {
+    position: relative;
+    z-index: 2;
+}
+
+.category-banner::after {
+    content: '';
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    right: 0;
+    height: 1.5px;
+    background-color: #e5e7eb;
+}
+
+.category-circular-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 15px;
+}
+
+.category-circle-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.circle-img-wrap {
+   width: 100px;
+    height: 100px;
+    background-color: #f3f4f6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px; /* Increase this value (e.g., from 10px to 16px or 20px) for more space below the circle */
+    transition: background-color 0.2s;
+}
+
+.circle-img-wrap img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important; /* Scales the image to fill the entire circle */
+    border-radius: 50%;
+}
+
+.circle-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 8px 0;
+}
+
+.circle-count {
+    font-size: 12px;
+    color: #9ca3af;
+    margin: 0;
+}
+
        </style>
     </head>
 <body>
@@ -2999,6 +3141,110 @@ color: #4b5563;
 
         <button class="carousel-arrow-btn next-btn"><i class="fa-solid fa-chevron-right"></i></button>
     </div>
+</div>
+
+<!-- HTML Structure for 3 Column Category Section -->
+<div class="triple-category-container">
+    
+    <!-- Column 1: Audios & Cameras -->
+    <div class="category-column">
+        <div class="category-col-header">
+            <h3 class="category-col-title">AUDIOS & CAMERAS</h3>
+            <a href="#" class="category-col-view-all">View All</a>
+        </div>
+        <div class="category-banner">
+            <img src="images/Best Speaker.png" alt="Best Speaker" class="category-banner-img">
+        </div>
+        <div class="category-circular-grid">
+            <div class="category-circle-item">
+                <div class="circle-img-wrap"><img src="images/speaker1.png" alt="Speaker"></div>
+                <h4 class="circle-title">Speaker</h4>
+                <span class="circle-count">12 items</span>
+            </div>
+            <div class="category-circle-item">
+                <div class="circle-img-wrap"><img src="images/camera.png" alt="DSLR Camera"></div>
+                <h4 class="circle-title">DSLR Camera</h4>
+                <span class="circle-count">9 items</span>
+            </div>
+            <div class="category-circle-item">
+                <div class="circle-img-wrap"><img src="images/Earbuds.png" alt="Earbuds"></div>
+                <h4 class="circle-title">Earbuds</h4>
+                <span class="circle-count">5 items</span>
+            </div>
+            <div class="category-circle-item">
+                <div class="circle-img-wrap"><img src="images/Microphone.png" alt="Microphone"></div>
+                <h4 class="circle-title">Microphone</h4>
+                <span class="circle-count">12 items</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Column 2: Gaming -->
+    <div class="category-column">
+        <div class="category-col-header">
+            <h3 class="category-col-title">GAMING</h3>
+            <a href="#" class="category-col-view-all">View All</a>
+        </div>
+        <div class="category-banner">
+            <img src="images/Wireless Gaming.png" alt="Gaming Mouse" class="category-banner-img">
+        </div>
+        <div class="category-circular-grid">
+            <div class="category-circle-item">
+                <div class="circle-img-wrap"><img src="monitor.png" alt="Monitors"></div>
+                <h4 class="circle-title">Monitors</h4>
+                <span class="circle-count">28 items</span>
+            </div>
+            <div class="category-circle-item">
+                <div class="circle-img-wrap"><img src="chair.png" alt="Chair"></div>
+                <h4 class="circle-title">Chair</h4>
+                <span class="circle-count">12 items</span>
+            </div>
+            <div class="category-circle-item">
+                <div class="circle-img-wrap"><img src="controller.png" alt="Controller"></div>
+                <h4 class="circle-title">Controller</h4>
+                <span class="circle-count">9 items</span>
+            </div>
+            <div class="category-circle-item">
+                <div class="circle-img-wrap"><img src="keyboard.png" alt="Keyboards"></div>
+                <h4 class="circle-title">Keyboards</h4>
+                <span class="circle-count">30 items</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Column 3: Office Equipments -->
+    <div class="category-column">
+        <div class="category-col-header">
+            <h3 class="category-col-title">OFFICE EQUIPMENTS</h3>
+            <a href="#" class="category-col-view-all">View All</a>
+        </div>
+        <div class="category-banner">
+            <img src="images/Laser Projector.png" alt="Laser Projector" class="category-banner-img">
+        </div>
+        <div class="category-circular-grid">
+            <div class="category-circle-item">
+                <div class="circle-img-wrap"><img src="printer.png" alt="Printers"></div>
+                <h4 class="circle-title">Printers</h4>
+                <span class="circle-count">9 items</span>
+            </div>
+            <div class="category-circle-item">
+                <div class="circle-img-wrap"><img src="network.png" alt="Network"></div>
+                <h4 class="circle-title">Network</h4>
+                <span class="circle-count">90 items</span>
+            </div>
+            <div class="category-circle-item">
+                <div class="circle-img-wrap"><img src="security.png" alt="Security"></div>
+                <h4 class="circle-title">Security</h4>
+                <span class="circle-count">12 items</span>
+            </div>
+            <div class="category-circle-item">
+                <div class="circle-img-wrap"><img src="projector.png" alt="Projectors"></div>
+                <h4 class="circle-title">Projectors</h4>
+                <span class="circle-count">12 items</span>
+            </div>
+        </div>
+    </div>
+
 </div>
 
 </body>
